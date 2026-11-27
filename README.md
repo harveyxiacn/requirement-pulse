@@ -1,5 +1,7 @@
 # Requirement Pulse · 需求脉冲
 
+[![CI](https://github.com/harveyxiacn/requirement-pulse/actions/workflows/ci.yml/badge.svg)](https://github.com/harveyxiacn/requirement-pulse/actions/workflows/ci.yml)
+
 一个本地优先的 Windows 需求决策看板。需求不只是被记录：Claude Code、Codex、DeepSeek 等 Agent 可以读取需求、领取分析任务，并把结构化判断写回看板；是否采纳、需求标题与验收标准始终由人决定。
 
 ![Requirement Pulse 看板](docs/screenshots/board-light.png)

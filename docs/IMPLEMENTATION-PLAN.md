@@ -19,7 +19,7 @@
 - [x] `npm run typecheck`、`npm run test`、`npm run build` 全部通过。
 - [x] Electron E2E 冒烟覆盖主流程与页面截图；报告已验证/未验证项。
 - [x] 详细设计文档、规划、README、AGENT-PROTOCOL 入库。
-- [ ] GitHub 公共仓库创建并推送，MIT License 明确。
+- [x] GitHub 公共仓库创建并推送，MIT License 明确。
 
 ---
 
@@ -331,6 +331,9 @@ npm run test:e2e        # 若环境可运行 Electron GUI
 | `npm run dist:win` | 通过：`release/Requirement-Pulse-0.1.0-Setup.exe` |
 | 打包版启动 + HTTP + MCP | 通过：8 工具列出并调用 `pulse_board_summary`，MCP 路径指向 `resources/mcp-server/index.mjs` |
 | 严格 CSP / sandbox / contextIsolation | 打包与未打包均加载正常，无页面错误 |
+| `npm run dev` | 通过：Vite 绑定 127.0.0.1，Electron 正常加载并写入用户数据 |
+| `npm run smoke:packaged` | 通过：打包版 UI、HTTP health、需求列表、8 个 MCP 工具 |
+| GitHub Actions（push / PR） | 通过：1m13s，类型检查、23 项测试、构建全绿 |
 
 ### 9.2 尚未验证
 
@@ -338,6 +341,5 @@ npm run test:e2e        # 若环境可运行 Electron GUI
 - Windows 高对比度模式、非 100% 显示缩放下的拖拽手感。
 - 多显示器热插拔、系统休眠恢复后的窗口位置。
 - 安装包在干净 Windows 机器上的 SmartScreen 交互（未签名）。
-- GitHub Actions 首次运行结果（工作流已提交，需推送后确认）。
 
 > 以上项目保留为“未验证”，不以自动化扫描替代真实辅助技术或设备测试。
