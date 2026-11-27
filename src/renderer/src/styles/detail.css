@@ -680,7 +680,7 @@
   margin-top: 9px;
 }
 
-.analysis-section h4 {
+.analysis-section h3 {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -690,7 +690,7 @@
   font-weight: 650;
 }
 
-.analysis-section h4 svg {
+.analysis-section h3 svg {
   color: var(--ink-3);
 }
 

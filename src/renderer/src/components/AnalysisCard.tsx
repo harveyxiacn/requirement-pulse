@@ -69,7 +69,7 @@ export function AnalysisCard({
 
       {analysis.proposedSteps.length > 0 ? (
         <section className="analysis-section">
-          <h4><ListChecks size={13} aria-hidden="true" /> 建议步骤</h4>
+          <h3><ListChecks size={13} aria-hidden="true" /> 建议步骤</h3>
           <ol className="analysis-steps">
             {analysis.proposedSteps.map((step, index) => (
               <li key={`${index}-${step}`}>
@@ -85,7 +85,7 @@ export function AnalysisCard({
         <div className="analysis-columns">
           {analysis.risks.length > 0 ? (
             <section className="analysis-section">
-              <h4><ShieldAlert size={13} aria-hidden="true" /> 风险</h4>
+              <h3><ShieldAlert size={13} aria-hidden="true" /> 风险</h3>
               <ul className="analysis-bullets">
                 {analysis.risks.map((risk, index) => (
                   <li key={`${index}-${risk}`}>{risk}</li>
@@ -95,7 +95,7 @@ export function AnalysisCard({
           ) : null}
           {analysis.openQuestions.length > 0 ? (
             <section className="analysis-section">
-              <h4><CircleHelp size={13} aria-hidden="true" /> 开放问题</h4>
+              <h3><CircleHelp size={13} aria-hidden="true" /> 开放问题</h3>
               <ul className="analysis-bullets analysis-questions">
                 {analysis.openQuestions.map((question, index) => (
                   <li key={`${index}-${question}`}>{question}</li>
@@ -108,7 +108,7 @@ export function AnalysisCard({
 
       {analysis.notes ? (
         <section className="analysis-section analysis-notes">
-          <h4><Sparkles size={13} aria-hidden="true" /> 备注</h4>
+          <h3><Sparkles size={13} aria-hidden="true" /> 备注</h3>
           <Markdown>{analysis.notes}</Markdown>
         </section>
       ) : null}

@@ -147,7 +147,7 @@ npm run test:e2e    # Playwright 驱动真实 Electron：主流程、1024/1440 �
 npm run smoke:packaged  # 需先 dist:win：验证打包版渲染、HTTP 与 8 个 MCP 工具
 ```
 
-E2E 覆盖：看板渲染、键盘创建需求、命令面板导航、菜单换列、浅色/深色、主路由 axe（serious/critical 为 0）。已完成的运行时验证：
+E2E 覆盖：看板渲染、键盘创建需求、命令面板导航、菜单换列、浅色/深色、主导航页与需求详情的 axe 扫描（serious/critical 为 0）。已完成的运行时验证：
 
 - Windows x64 安装包构建成功，`win-unpacked` 启动通过。
 - 打包应用中 MCP 路径解析到 `resources/mcp-server/index.mjs`，HTTP health 正常，8 个 MCP 工具可列出并调用。

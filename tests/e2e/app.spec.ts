@@ -102,7 +102,7 @@ test('navigates with the command palette and moves a card via the menu', async (
     fullPage: false
   })
 
-  await page.getByRole('link', { name: /需求看板/ }).click()
+  await page.locator('.sidebar-nav').getByRole('link', { name: /需求看板/ }).click()
   await expect(page.getByRole('heading', { name: '需求看板', level: 1 })).toBeVisible()
 
   await page.getByRole('button', { name: '列表视图' }).click()
@@ -130,6 +130,13 @@ test('has no serious or critical axe violations on the main routes', async () =>
   }
 
   await scan('board')
+  await page.locator('.requirement-card').filter({ hasText: 'REQ-001' }).locator('.card-main').click()
+  await expect(
+    page.getByRole('heading', { name: '把 Agent 分析沉淀为可比较的决策卡', level: 1 })
+  ).toBeVisible()
+  await scan('detail')
+  await page.locator('.sidebar-nav').getByRole('link', { name: /需求看板/ }).click()
+  await expect(page.locator('.board-page')).toBeVisible()
   await electronApp.evaluate(({ BrowserWindow }) => {
     BrowserWindow.getAllWindows()[0]?.setSize(1024, 768)
   })
@@ -145,10 +152,15 @@ test('has no serious or critical axe violations on the main routes', async () =>
   await page.getByText('深色工作台', { exact: true }).click()
   await page.waitForTimeout(300)
   await scan('settings-dark')
-  await page.getByRole('link', { name: /需求看板/ }).click()
+  await page.locator('.sidebar-nav').getByRole('link', { name: /需求看板/ }).click()
   await scan('board-dark')
   await page.screenshot({
     path: 'test-results/screenshots/board-dark-1024x768.png',
     fullPage: false
   })
+  await page.locator('.requirement-card').filter({ hasText: 'REQ-001' }).locator('.card-main').click()
+  await expect(
+    page.getByRole('heading', { name: '把 Agent 分析沉淀为可比较的决策卡', level: 1 })
+  ).toBeVisible()
+  await scan('detail-dark')
 })

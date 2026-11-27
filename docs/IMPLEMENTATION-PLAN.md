@@ -299,7 +299,7 @@ npm run test:e2e        # 若环境可运行 Electron GUI
 
 ### 8.3 无障碍
 
-- 用 axe 扫描 Board / Detail / Agents / Settings。
+- 用 axe 扫描 Board / Detail / Agents / Activity / Settings。
 - 手工：关闭鼠标，仅键盘完成核心路径。
 - 系统设置开启减少动态，确认无位移动画/时长为 0。
 - 高对比/深色主题下检查 focus ring 可见。
@@ -327,7 +327,7 @@ npm run test:e2e        # 若环境可运行 Electron GUI
 | `npm test` | 通过：3 个测试文件，23 项测试 |
 | `npm run build` | 通过：main/preload/renderer + MCP 单文件 |
 | `npm run test:e2e` | 通过：4 项 E2E（1440×900、1024×768、浅/深色） |
-| axe（Board / Agents / Activity / Settings，浅色 + 深色 + 1024 宽） | serious/critical = 0 |
+| axe（Board / Detail / Agents / Activity / Settings，浅色 + 深色 + 1024 宽） | serious/critical = 0；详情页验收清单复选框具备可访问名称，分析小节标题按 h2 → h3 排列 |
 | `npm run dist:win` | 通过：`release/Requirement-Pulse-0.1.0-Setup.exe` |
 | 打包版启动 + HTTP + MCP | 通过：8 工具列出并调用 `pulse_board_summary`，MCP 路径指向 `resources/mcp-server/index.mjs` |
 | 严格 CSP / sandbox / contextIsolation | 打包与未打包均加载正常，无页面错误 |
