@@ -1,0 +1,145 @@
+/* Requirement Pulse — tokens */
+:root {
+  color-scheme: light;
+
+  --font-sans: 'Manrope Variable', 'Noto Sans SC Variable', 'Segoe UI', 'Microsoft YaHei', sans-serif;
+  --font-mono: 'JetBrains Mono Variable', 'SFMono-Regular', Consolas, monospace;
+
+  --bg: #f2f0e8;
+  --surface: #fbfaf6;
+  --surface-2: #f5f3ec;
+  --surface-3: #e9e6dd;
+  --sunken: #e5e2d8;
+  --line: rgba(26, 29, 22, 0.12);
+  --line-strong: rgba(26, 29, 22, 0.22);
+  --line-soft: rgba(26, 29, 22, 0.07);
+  --ink: #1a1d16;
+  --ink-2: #4e5448;
+  --ink-3: #62695b;
+  --ink-4: #8a9081;
+  --accent: #c8f35a;
+  --accent-strong: #d3fa6e;
+  --accent-ink: #5c760d;
+  --on-accent: #171a10;
+  --signal-dot: #6e8f12;
+  --focus: #6c8f13;
+  --focus-ring: rgba(108, 143, 19, 0.2);
+
+  --danger: #a63b2a;
+  --danger-strong: #8d2f20;
+  --danger-bg: rgba(166, 59, 42, 0.09);
+  --danger-line: rgba(166, 59, 42, 0.25);
+  --success: #4f6d27;
+  --success-bg: rgba(79, 109, 39, 0.1);
+  --success-line: rgba(79, 109, 39, 0.26);
+  --warning: #8a5a12;
+  --warning-bg: rgba(138, 90, 18, 0.1);
+  --warning-line: rgba(138, 90, 18, 0.28);
+
+  --chrome: #0b0d0a;
+  --chrome-2: #10130d;
+  --chrome-text: #e8ece1;
+  --chrome-muted: #9aa291;
+  --chrome-faint: #858e7c;
+  --chrome-line: rgba(232, 236, 225, 0.12);
+  --chrome-hover: rgba(232, 236, 225, 0.075);
+
+  --status-inbox: #6f7566;
+  --status-planned: #3f6d73;
+  --status-building: #96651b;
+  --status-review: #a0512f;
+  --status-done: #4c702d;
+
+  --agent-claude: #a9542f;
+  --agent-codex: #337361;
+  --agent-deepseek: #496b9d;
+  --agent-generic: #66705f;
+  --agent-human: #75623d;
+  --agent-system: #777f70;
+
+  --code-bg: #181c15;
+  --toast-bg: #1b2018;
+
+  --shadow-card: 0 1px 0 rgba(26, 29, 22, 0.03), 0 12px 28px -22px rgba(26, 29, 22, 0.4);
+  --shadow-pop: 0 30px 80px -28px rgba(10, 12, 8, 0.42), 0 4px 14px rgba(10, 12, 8, 0.1);
+
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
+
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-fast: 120ms;
+  --dur: 170ms;
+  --dur-slow: 240ms;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --bg: #0f120e;
+  --surface: #171b15;
+  --surface-2: #1c211a;
+  --surface-3: #232821;
+  --sunken: #121610;
+  --line: rgba(232, 236, 225, 0.12);
+  --line-strong: rgba(232, 236, 225, 0.22);
+  --line-soft: rgba(232, 236, 225, 0.07);
+  --ink: #f0f2e9;
+  --ink-2: #bdc3b4;
+  --ink-3: #8f9787;
+  --ink-4: #788072;
+  --accent: #c9f35a;
+  --accent-strong: #d5fb70;
+  --accent-ink: #c9f35a;
+  --on-accent: #14170f;
+  --signal-dot: #c9f35a;
+  --focus: #c9f35a;
+  --focus-ring: rgba(201, 243, 90, 0.22);
+
+  --danger: #e07962;
+  --danger-strong: #ea8c77;
+  --danger-bg: rgba(224, 121, 98, 0.12);
+  --danger-line: rgba(224, 121, 98, 0.3);
+  --success: #a4c773;
+  --success-bg: rgba(164, 199, 115, 0.1);
+  --success-line: rgba(164, 199, 115, 0.26);
+  --warning: #d7a75c;
+  --warning-bg: rgba(215, 167, 92, 0.1);
+  --warning-line: rgba(215, 167, 92, 0.26);
+
+  --chrome: #090b08;
+  --chrome-2: #0d100b;
+  --chrome-text: #e8ece1;
+  --chrome-muted: #9aa291;
+  --chrome-faint: #858e7c;
+  --chrome-line: rgba(232, 236, 225, 0.1);
+  --chrome-hover: rgba(232, 236, 225, 0.065);
+
+  --status-inbox: #a0a794;
+  --status-planned: #79aab1;
+  --status-building: #d3a75e;
+  --status-review: #d58b66;
+  --status-done: #9bbd6e;
+
+  --agent-claude: #d98a63;
+  --agent-codex: #69a894;
+  --agent-deepseek: #7d9dd0;
+  --agent-generic: #98a18f;
+  --agent-human: #c0a878;
+  --agent-system: #9ba294;
+
+  --code-bg: #0a0d09;
+  --toast-bg: #20261d;
+
+  --shadow-card: 0 1px 0 rgba(0, 0, 0, 0.25), 0 14px 30px -24px rgba(0, 0, 0, 0.8);
+  --shadow-pop: 0 34px 90px -30px rgba(0, 0, 0, 0.86), 0 4px 16px rgba(0, 0, 0, 0.45);
+}
+
+.agent-kind-claude-code { --agent-color: var(--agent-claude); }
+.agent-kind-codex { --agent-color: var(--agent-codex); }
+.agent-kind-deepseek { --agent-color: var(--agent-deepseek); }
+.agent-kind-generic { --agent-color: var(--agent-generic); }
+.agent-kind-human { --agent-color: var(--agent-human); }
+.agent-kind-system { --agent-color: var(--agent-system); }

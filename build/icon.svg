@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-label="Requirement Pulse">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ddff78"/>
+      <stop offset="0.55" stop-color="#c8f35a"/>
+      <stop offset="1" stop-color="#aee043"/>
+    </linearGradient>
+    <radialGradient id="sheen" cx="0.24" cy="0.12" r="0.9">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.5"/>
+      <stop offset="0.55" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1f14"/>
+      <stop offset="1" stop-color="#0d100a"/>
+    </linearGradient>
+  </defs>
+  <rect x="20" y="20" width="984" height="984" rx="222" fill="url(#bg)"/>
+  <rect x="20" y="20" width="984" height="984" rx="222" fill="url(#sheen)"/>
+  <rect x="20" y="20" width="984" height="984" rx="222" fill="none" stroke="#0d100a" stroke-opacity="0.18" stroke-width="12"/>
+  <path
+    d="M174 548h150l66-150 92 330 88-300 62 210 54-90h164"
+    fill="none"
+    stroke="url(#ink)"
+    stroke-width="76"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

@@ -1,0 +1,38 @@
+appId: com.harveyxiacn.requirementpulse
+productName: Requirement Pulse
+copyright: Copyright © 2026 Harvey Xia
+asar: true
+directories:
+  buildResources: build
+  output: release
+files:
+  - out/**/*
+  - package.json
+  - '!**/*.map'
+extraResources:
+  - from: tools/mcp-server/dist/index.mjs
+    to: mcp-server/index.mjs
+  - from: build/icon.png
+    to: build/icon.png
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: build/icon.ico
+  artifactName: Requirement-Pulse-${version}-Setup.${ext}
+  requestedExecutionLevel: asInvoker
+nsis:
+  oneClick: false
+  perMachine: false
+  allowElevation: true
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Requirement Pulse
+  uninstallDisplayName: Requirement Pulse
+  deleteAppDataOnUninstall: false
+  runAfterFinish: true
+  installerIcon: build/icon.ico
+  installerHeaderIcon: build/icon.ico
+  uninstallerIcon: build/icon.ico
